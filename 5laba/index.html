@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Rectangle Example</title>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            #myCanvas {
+                border: 3px solid #000000;
+                background-color:#00BFFF;
+            }
+        </style>
+<script type="text/javascript">
+function drawShape(){
+   var canvas = document.getElementById('myCanvas');
+
+    var context = canvas.getContext('2d');
+
+ context.strokeRect(100,300,400,200);
+ context.strokeRect(500,150,200,350);
+  context.strokeRect(550,200,100,100);
+ context.strokeRect(150,200,35,100);
+ 
+
+                context.beginPath();
+                context.moveTo(100, 500);
+                context.lineTo(60,550);
+				
+				context.moveTo(700, 500);
+                context.lineTo(740,550);
+				
+				context.moveTo(130, 550);
+                context.lineTo(670,550);
+				
+                context.lineWidth = 4;
+                context.strokeStyle = "#00FF7F"; 
+                context.lineCap = "round";
+                context.stroke();
+	
+	
+	 context.strokeStyle = "#00FF7F";
+    context.fillStyle = "#F8F8FF";
+     context.beginPath();
+     context.arc(140,600,50,0,Math.PI*2,true);    
+     context.closePath();
+     context.stroke();
+     context.fill();
+	 
+	  context.strokeStyle = "#00FF7F";
+    context.fillStyle = "#F8F8FF";
+     context.beginPath();
+     context.arc(244,600,50,0,Math.PI*2,true);    
+     context.closePath();
+     context.stroke();
+     context.fill();
+	 
+	  context.strokeStyle = "#00FF7F";
+    context.fillStyle = "#F8F8FF";
+     context.beginPath();
+     context.arc(348,600,50,0,Math.PI*2,true);    
+     context.closePath();
+     context.stroke();
+     context.fill();
+	
+ context.strokeStyle = "#00FF7F";
+    context.fillStyle = "#F8F8FF";
+     context.beginPath();
+     context.arc(452,600,50,0,Math.PI*2,true);    
+     context.closePath();
+     context.stroke();
+     context.fill();
+	
+	
+	context.strokeStyle = "#00FF7F";
+    context.fillStyle = "#F8F8FF";
+     context.beginPath();
+     context.arc(555,600,50,0,Math.PI*2,true);    
+     context.closePath();
+     context.stroke();
+     context.fill();
+  
+
+			context.strokeStyle = "#00FF7F";
+    context.fillStyle = "#F8F8FF";
+     context.beginPath();
+     context.arc(658,600,50,0,Math.PI*2,true);    
+     context.closePath();
+     context.stroke();
+     context.fill();
+  		
+
+}
+</script>
+</head>
+<body onload="drawShape();">
+   <canvas id="myCanvas" width="800" height="700"></canvas>
+</body>
+</html>
