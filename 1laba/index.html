@@ -1,0 +1,19 @@
+<HTML>
+
+<BODY>
+<input type="text" id="vel" placeholder="цена за килограмм">
+<br>
+<input type="text" id="kof" placeholder="вес">
+<br>
+<input type="button" value="Расчитать" onclick="rac()">
+<div id="pole"></div>
+<SCRIPT>
+function rac() {
+	var vel = document.getElementById('vel').value;
+	var kof = document.getElementById('kof').value;
+	var itog = vel*kof;
+	var pole = document.getElementById('pole').innerHTML="оющая стоимость = "+itog;
+}
+</SCRIPT>
+</BODY>
+</HTML>
