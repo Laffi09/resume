@@ -1,56 +1,42 @@
-<html>
+<HTML>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Таблица продаж яблок</title>
-	<style>
-		
-
-TABLE {
-    background: maroon; /* Цвет фона таблицы */
-    color: white; /* Цвет текста */
+<style type="text/css">
+   TABLE {
+    width: 100%; /* Ширина таблицы */
+    border: 1px solid #399; /* Граница вокруг таблицы */
+    border-spacing: 7px 5px; /* Расстояние между границ */
    }
    TD {
-    background: navy; /* Цвет фона ячеек */
+    background: #fc0; /* Цвет фона */
+    border: 1px solid #333; /* Граница вокруг ячеек */
+    padding: 5px; /* Поля в ячейках */ 
    }
-	</style>
-	<script>
-		function get_rand(min,max){
-			var r = min - 0.5 + Math.random()*(max-min+1);
-			return Math.round(r);
-		}
-		function do_it(){
-			var sssr = '<table id="Table">';
-			sssr += '<tr><td>Январь</td><td>Февраль</td><td>Март</td><td>Апрель</td><td>Май</td><td>Июнь</td><td>Июль</td><td>Август</td><td>Сентябрь</td><td>Октябрь</td><td>Ноябрь</td><td>Декабрь</td></tr>'
-			for (var i=1; i < 2; i++){
-				sssr = sssr + '<tr>';
-				for (var j=1; j < 13; j++){
-					sssr = sssr + '<td>'+get_rand(90,120)+'</td>';
-				}
-				sssr = sssr + '</tr>';
-			}
-			sssr = sssr + '</table>';
-			document.getElementById('pole').innerHTML = sssr;
-		}
-		
-		function show(){
-			var table = document.getElementById('Table');
-			for (var i=0; i<table.rows.length; i++) {
-				for (var j=0; j<table.rows[0].cells.length; j++) {
-					var TD=table.rows[i].cells[j];
-					var TD2=table.rows[0].cells[j];
-					if (TD.innerHTML > 100) {
-						TD2.style.backgroundColor = "pink";
-					}
-				}
-			}
-		}
-	</script>
-</head>
-<body>
-	<input type="button" id="push" value="Рандом" onClick="do_it()"  >
-	<input type="button" id="push" value="Выбрать " onClick="show()"  >
-	<div id="pole">
-		
-	</div>
-</body>
-</html>
+  </style>
+<script>
+function getrandom(min,max)
+{var rand=min-0.5+Math.random()*(max-min+1)
+rand=Math.round(rand);
+return rand;
+}
+function show(){
+var table=document.getElementById('TABLE');
+for (var i=0; i<table.rows.length;i++){
+for (var j=0; j<table.rows[0].cells.length; j++) {
+var TD=table.rows[i].cells[j];
+if (TD.innerHTML=='6')
+{TD.className='TD'}
+   }
+  }
+ } 
+ </script>
+ </head>
+<BODY onload="show">
+<div align="center">
+<TABLE id="TABLE">
+</TABLE>
+<input type="button" value="Рандомный вывод чисел" onclick="getrandom()">
+<input type="button" value="Выделить" onclick="show()">
+</div>
+</div>
+</BODY>
+</HTML>
