@@ -1,134 +1,119 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-<title>Rectangle Example</title>
-        <style>
-            body {
-                margin: 0px;
-                padding: 0px;
-            }
-            
-            #myCanvas {
-                border: 1px solid #111111;
-                background-color: #F0FFF0;
-            }
-        </style>
+ <head>
+  <title>Korablik</title>
+  <meta charset="utf-8">
+
+  <canvas id="smile" width="1440" height="900">
+    <p>¬аш браузер не поддерживает рисование.</p>
+  </canvas>
+<body bgcolor="#63B8FF">
 <script type="text/javascript">
-function drawShape(){
-   var canvas = document.getElementById('myCanvas');
+    var myCanvas = document.getElementById('smile');
 
-    var context = canvas.getContext('2d');
+     var cxt = myCanvas.getContext('2d');
 
-    context.strokeRect(50,50,350,350);
-    context.fillRect(100,100,250,250);
-	context.strokeRect(370,370,20,20);
-	context.strokeRect(420,50,150,350);
-	   // blue line with round ends
-                context.beginPath();
-                context.moveTo(450, 100);
-                context.lineTo(550,100);
-                context.lineTo(550,100);
-                context.lineWidth = 3;
-                context.strokeStyle = "#0000FF"; 
-                context.lineCap = "round";
-                context.stroke();
+
+    
+
+	 cxt.strokeStyle = "#000";
+     cxt.fillStyle = "#63B8FF";
+	cxt.lineWidth = 10;
+     cxt.beginPath();
+	 cxt.arc(140,430,15,0,Math.PI*2,true);
 	
-                context.beginPath();
-                context.moveTo(450, 350);
-                context.lineTo(550,350);
-                context.lineWidth = 3;
-                context.strokeStyle = "#0000FF"; 
-                context.lineCap = "round";
-                context.stroke();
-				
-				
-                context.beginPath();
-                context.moveTo(400, 350);
-                context.lineTo(420,320);
-                context.lineWidth = 3;
-                context.strokeStyle = "#00FFFF"; 
-                context.lineCap = "round";
-                context.stroke();
-				
-				context.beginPath();
-                context.moveTo(50, 350);
-                context.lineTo(20,400);
-				context.moveTo(20, 400);
-                context.lineTo(20,470);
-				context.moveTo(20, 470);
-                context.lineTo(50,500);
-				context.moveTo(20, 550); //клава
-                context.lineTo(80,450);
-				
-				context.moveTo(20, 550); 
-                context.lineTo(330,550);
-				
-				context.moveTo(80, 450); 
-                context.lineTo(400,450);
-				
-				context.moveTo(400, 450); 
-                context.lineTo(330,550);
-				
-				context.moveTo(100, 510); //кнопки
-                context.lineTo(115,490);
-				
-				context.moveTo(100, 510); 
-                context.lineTo(120,510);
-				
-				context.moveTo(150, 510); //кнопки2
-                context.lineTo(165,490);
-				
-				context.moveTo(150, 510); 
-                context.lineTo(170,510);
-				
-				context.moveTo(200, 510); //кнопки3
-                context.lineTo(215,490);
-				
-				context.moveTo(200, 510); 
-                context.lineTo(220,510);
-				
-				context.moveTo(250, 510); //кнопки4
-                context.lineTo(265,490);
-				
-				context.moveTo(250, 510); 
-                context.lineTo(270,510);
-				
-	            context.lineWidth = 3;
-                context.strokeStyle = "#8470FF"; 
-                context.lineCap = "round";
-                context.stroke();
-				
-				context.beginPath();
-                context.moveTo(400, 400);
-                context.lineTo(400,420);
-				context.moveTo(400, 420);
-                context.lineTo(450,420);
-				context.moveTo(450, 420);
-                context.lineTo(450,455);
-           
-                context.lineWidth = 5;
-                context.strokeStyle = "#0000FF"; 
-                context.lineCap = "round";
-                context.stroke();
-				
-				context.strokeRect(430,455,50,75);
-				
-				  context.beginPath();
-                context.moveTo(460, 455);
-                context.lineTo(460,530);
-                context.lineWidth = 3;
-                context.strokeStyle = "#0000FF"; 
-                context.lineCap = "round";
-                context.stroke();
-				
-				
-    
-    
+	 cxt.closePath();
+     cxt.stroke();
+     cxt.fill();
+	 
+	 
+	 
+	 	 cxt.strokeStyle = "#000";
+     cxt.fillStyle = "#63B8FF";
+	 cxt.lineWidth = 5;
+     cxt.beginPath();
+	 cxt.arc(240,430,15,0,Math.PI*2,true);
+	 cxt.closePath();
+     cxt.stroke();
+     cxt.fill();
 
-}
-</script>
-</head>
-<body onload="drawShape();">
-   <canvas id="myCanvas" width="600" height="600"></canvas>
-</body>
+
+
+cxt.moveTo(680,500);
+cxt.lineTo(680,420);
+cxt.lineTo(280,420);
+cxt.lineTo(240,380);
+cxt.lineTo(0,380);
+cxt.lineTo(120,500);
+cxt.lineTo(680,500);
+ cxt.stroke();   
+cxt.closePath();
+cxt.strokeStyle = 'black';  
+
+cxt.lineWidth = 5;
+cxt.stroke();
+
+
+
+
+
+     cxt.beginPath();
+     
+	cxt.moveTo(560,420);
+     cxt.lineTo(520,380);
+     cxt.lineTo(520,340);
+     cxt.lineTo(160,340);
+     cxt.lineTo(160,380);
+     cxt.moveTo(480,380);
+     cxt.lineTo(320,380);
+     
+	  cxt.moveTo(0,380);
+     cxt.lineTo(280,100);
+     cxt.lineTo(680,420);
+	 
+	  cxt.moveTo(280,300);
+      cxt.lineTo(280,100);
+	  
+	  
+	  
+	  
+
+    cxt.lineWidth = 5; 	
+cxt.strokeStyle = 'black';
+
+cxt.stroke();
+
+
+ cxt.beginPath();
+ cxt.fillStyle = 'black';
+ cxt.strokeStyle = 
+ cxt.lineWidth = 5;
+ 
+cxt.fillRect(230,310,150,30);
+strokeRect(400,340,36,22);
+ 	
+
+cxt.stroke();
+ 
+
+
+ cxt.beginPath();
+ cxt.moveTo(280,300);
+cxt.lineTo(280,0);
+	  
+cxt.lineWidth = 5; 	
+cxt.strokeStyle = 'black';
+cxt.stroke();
+
+
+
+
+
+
+
+	
+ </script>
+
+ </head>
+ </body>
 </html>
