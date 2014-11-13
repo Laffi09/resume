@@ -1,51 +1,49 @@
+<!DOCTYPE HTML>
 <html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title></title>
+ <head>
+ 
 	<style>
-		
+		.blue {
+			color = blue;
+		}
 	</style>
-	<script>
-		var mass = ['муха','Дилара','Маша','Таня','Флешка'];
-		var max = 0;
-		function get_rand(min,max){
-			var r = min - 0.5 + Math.random()*(max-min+1);
-			return Math.round(r);
-		}
-		function do_it(){
-			var sssr = '<table id="Table" border = "1">';
-			for (var i=1; i < 6; i++){
-				sssr = sssr + '<tr>';
-				for (var j=1; j < 6; j++){
-					sssr = sssr + '<td>'+mass[get_rand(0,4)]+'</td>';
-				}
-				sssr = sssr + '</tr>';
-			}
-			sssr = sssr + '</table>';
-			document.getElementById('pole').innerHTML = sssr;
-		}
+ 
+  <meta charset="utf-8">
+  <title>Таблица</title>
+  <script type="text/javascript">
+
+	function show() {
 		
-		function show(){
-			var table = document.getElementById('Table');
-			for (var i=0; i<table.rows.length; i++) {
-				for (var j=0; j<table.rows[0].cells.length; j++) {
-					var TD=table.rows[i].cells[j];
-					if (TD.innerHTML=='муха') {
-						TD.innerHTML='слон';
-					}
+		var table=document.getElementById('table');
+		for (var i=0; i<table.rows.length; i++) {
+		
+			for (var j=0; j<table.rows[0].cells.length; j++) {
+				var TD=table.rows[i].cells[j];
+				// console.log(TD); 
+				var sssr = TD.innerHTML;
+				if (sssr[sssr.length-1] == 'ь') {
+					
+					TD.style.backgroundColor = "green";
 					
 				}
 			}
-		
 		}
+	}
 	</script>
-</head>
-<body>
-	<input type="button" id="push" value="РАНДОМ" onClick="do_it()"  >
-	<input type="button" id="push" value="ЗАМЕНА" onClick="show()"  >
-	<div id="pole">
-		
-	</div>
-</body>
+ </head>
+ <body>
+  <button id="main" onclick="show()">Найти</button></br></br>
+  <div id="pole">
+  <table name="table" id="table" border="1">
+   <tr><td>скорость</td><td>время</td><td>расстояние</td><td>кость</td></tr>
+   <tr><td>индеец</td><td>джомолунгма</td><td>шварцнеггер</td><td>акуна матата</td></tr>
+   <tr><td>матан</td><td>солнце</td><td>месть</td><td>костер</td></tr>
+   <tr><td>клавиатура</td><td>погода</td><td>дымоход</td><td>аллилуйа</td></tr>
+   <tr><td>велосипед</td><td>земля</td><td>купить</td><td>мясо</td></tr>
+   <tr><td>стул</td><td>стол</td><td>чебурек</td><td>аккордеон</td></tr>
+   <tr><td>программировать</td><td>пакет</td><td>ниндзя</td><td>капитан</td></tr>
+   <tr><td>деревня</td><td>рубашка</td><td>пить</td><td>ручка</td></tr>
+  </table>
+  </div>
+ </body>
 </html>
-
